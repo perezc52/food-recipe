@@ -207,4 +207,8 @@ h1 {
         flex-basis: calc(100% - 20px);
         max-width: calc(100% - 20px);
     }
+
+    .modal-container {
+        width: 85%;
+    }
 }
