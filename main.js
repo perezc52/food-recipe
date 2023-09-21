@@ -10,11 +10,7 @@ const recipeCloseBtn = document.getElementById('recipeCloseBtn')
 // Event Listeners
 
 searchButton.addEventListener('click', async () => {
-    const ingredient = searchInput.value.trim()
-    if(ingredient) {
-        const meals = await searchMealsByIngredient(ingredient)
-        displayMeals(meals)
-    }
+    performSearch()
 })
 
 recipeCloseBtn.addEventListener('click', closeRecipeModal)
@@ -84,9 +80,22 @@ function displayMeals(meals) {
 
 //Function to display info on popup modal
 function showMealDetailsPopup(meal) {
+    const ingredients = []
+    for(let i = 0; i < Object.keys(meal).length; i++) {
+        if(meal[`strIngredient${i}`] && meal[`strIngredient${i}`] !== '') {
+            ingredients.push(meal[`strIngredient${i}`])
+        }
+    }
+    const ingredientsHTML = ingredients.map(el => `<li>${el}</li>`).join('')
     mealDetailsContent.innerHTML = `
         <h2 class='recipe-title'>${meal.strMeal}</h2>
         <p class='recipe-category'>${meal.strCategory}</p>
+        <div class='recipe-ingredients'>
+            <h3>Ingredients:</h3>
+            <ol>
+                ${ingredientsHTML}
+            </ol>
+        </div>
         <div class='recipe-instruct'>
             <h3>Instructions:</h3>
             <p>${meal.strInstructions}</p>
