@@ -1,6 +1,6 @@
 # Recipe Finder
 
-![Screenshot]()
+![Screenshot](04.jpg)
 
 
 A frontend website built with HTML, CSS, and JavaScript that allows users to discover recipes by inputting an ingredient of their choice. The website utilizes data from TheMealDB database to fetch and display relevant dishes based on user input.
