@@ -1,9 +1,11 @@
 # Recipe Finder
+
+![Screenshot]()
+
+
 A frontend website built with HTML, CSS, and JavaScript that allows users to discover recipes by inputting an ingredient of their choice. The website utilizes data from TheMealDB database to fetch and display relevant dishes based on user input.
 
 [Live Demo](https://recipe-finder-fawn.vercel.app/)
-
-![alt tag](http://placecorgi.com/1200/650)
 
 **Tech used:** HTML, CSS, JavaScript
 
